@@ -1,0 +1,11 @@
+.SecondnavBar{
+    margin-top: 40px;
+    column-span: all;
+    width: 100%;
+}
+#categories{
+    height: 56px;
+    min-width: 100%;
+    white-space: nowrap;
+    background-color:#fff;
+}

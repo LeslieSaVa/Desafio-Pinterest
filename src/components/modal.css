@@ -1,0 +1,25 @@
+.img-container{
+    background: gray;
+    width: 50%;
+    box-sizing: border-box;
+    display: block;
+}
+.text-container{
+    background-color: green;
+    width: 50%;
+    box-sizing: border-box;
+    display: block;
+}
+.modal{
+    width: 800px;
+    height: 600px;
+    background: purple;
+    margin: auto;
+    display: flex;
+}
+.container-modal{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    background: #ffffff;
+}

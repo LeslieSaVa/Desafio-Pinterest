@@ -7,8 +7,8 @@ function Navbar (props) {
             <div className="navBar">
                 <div id="search-wrapper">
                     <ul>
-                        <li clasName="Home">Inicio</li>
-                        <li>Siguiendo</li>
+                        <li className="Home">Inicio</li>
+                        <li className="follow">Siguiendo</li>
                         <li><i className="fas fa-user-circle"></i>Leslie</li>
                         <li><i className="fas fa-comment-dots"></i></li>
                         <li><i className="fas fa-bell"></i></li>

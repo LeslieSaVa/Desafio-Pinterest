@@ -10,13 +10,34 @@ function Modal (props) {
                 }
                 }}>
             <div className="modal">
-                <div className="img-container">
-                    <img src={props.imgUrl} alt=""/>
+                <div className="header-modal">
+                    <i className="fas fa-ellipsis-h"></i>
+                    <button className="btn-send"><i class="fas fa-upload"></i> Enviar</button>
+                    <button className="btn-save"><i class="fas fa-thumbtack"></i> Guardar</button>
                 </div>
-                <div className="text-container">
-                    <button>Holi</button>
-                    <p>jdshfsdfhsdkfhsdfkjsdfhks</p>
+
+                <div className="containerImgyText">
+                    <div className="img-container">
+                        <img className="img-modal" src={props.imgUrl} alt=""/>
+                    </div>
+                    <div className="text-container">
+                        <h5>25 Christmas Nail Ideas to Try</h5>
+                        <button className="btn-follow">Seguir</button>
+                        <button className="link">goosesglitter.com</button>
+                        <p className="parrafo">You have your tree, your house and your<br/> 
+                        dinner table decorated already. <br/> 
+                        What are you going to do after finishing <br/> 
+                        your holiday decoration and <br/> 
+                        wrapping all the gifts? Don't forget<br/> 
+                         to glam up yourself...Más
+                        </p>
+                        <hr className="line"/>
+                        <p className="text">Fotos y comentarios</p>
+                        <button className="btn-numberfotos">3 Fotos</button>
+                        <p className="coments">Comentarios</p>
+                    </div>
                 </div>
+
             </div>
             </div>
         )

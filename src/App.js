@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import Pictures from './components/pictures';
 import Navbar from './components/navbar';
-import Categories from './components/categories'
 import Modal from './components/modal'
 import './App.css';
 
@@ -61,10 +59,6 @@ class App extends Component {
       <div className="App">
         {this.state.modal && <Modal pushClick={this.closeModal} imgUrl={this.state.modal}/>}
           <Navbar />
-          {/* <Categories /> */}
-      {/* <div className="Grid">
-        {this.state.fotos && this.llamarfotos()}
-      </div>     */}
       <div className="flex-container">
             {this.state.fotos && this.llamarfotos()}
       </div>

@@ -9,6 +9,7 @@ function Modal (props) {
                     props.pushClick()
                 }
                 }}>
+                <i class="fas fa-angle-left"></i>    
             <div className="modal">
                 <div className="header-modal">
                     <i className="fas fa-ellipsis-h"></i>
@@ -29,7 +30,7 @@ function Modal (props) {
                         What are you going to do after finishing <br/> 
                         your holiday decoration and <br/> 
                         wrapping all the gifts? Don't forget<br/> 
-                         to glam up yourself...Más
+                        to glam up yourself...Más
                         </p>
                         <hr className="line"/>
                         <p className="text">Fotos y comentarios</p>

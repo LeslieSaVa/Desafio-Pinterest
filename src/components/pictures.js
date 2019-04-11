@@ -7,7 +7,7 @@ function Pictures (props) {
 
         <div className="row">
             <div className="column">
-                <img className="img" src={props.url} alt="auto" onClick={()=>props.pushClick(props.url)}/>
+                <img className="img" src={props.url} alt="auto" onClick={()=>props.pushClick(props)}/>
                 {/* <h2>Title Goes Here</h2>
                 <p>Loremdlkfjsdlfkdsjflkdsjflkd
                     sjfldskjflsdfjsdlkfjdslfkjdsflsdjfdskf

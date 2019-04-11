@@ -12,6 +12,8 @@ class App extends Component {
       fotos:null,
       modal:false,
       countPage:1,
+      title:null,
+      description2:null,
     }
     this.openModal=this.openModal.bind(this);
     this.closeModal=this.closeModal.bind(this);
@@ -20,14 +22,13 @@ class App extends Component {
   componentWillUpdate() {
     window.onscroll = () => {
       if (
-      document.documentElement.scrollTop === document.documentElement.offsetHeight - window.innerHeight
+      document.documentElement.scrollTop + window.innerHeight > document.documentElement.offsetHeight*0.8 
       ){
-        console.log('alala')
         this.setState({
           ...this.state,
           countPage:this.state.countPage+1,
         }, () => {
-          fetch('https://api.unsplash.com/search/photos?page='+this.state.countPage+'&per_page=30&query=kitties&client_id=13a06edd9f1f800ed95967f2be74dc9462a6d41dcc8ac89f648c84b123782513')
+          fetch('https://api.unsplash.com/search/photos?page='+this.state.countPage+'&per_page=20&query=flowers&client_id=13a06edd9f1f800ed95967f2be74dc9462a6d41dcc8ac89f648c84b123782513')
           .then( data => data.json() )
           .then(data => {
             const data2 = this.state.fotos.results;
@@ -46,10 +47,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    if (
-      document.documentElement.scrollTop === 0
-      ){
-    fetch('https://api.unsplash.com/search/photos?page='+this.state.countPage+'&per_page=30&query=kitties&client_id=13a06edd9f1f800ed95967f2be74dc9462a6d41dcc8ac89f648c84b123782513')
+    // if (
+    //   document.documentElement.scrollTop === 0
+    //   ){
+    fetch('https://api.unsplash.com/search/photos?page='+this.state.countPage+'&per_page=20&query=flowers&client_id=13a06edd9f1f800ed95967f2be74dc9462a6d41dcc8ac89f648c84b123782513')
       .then( data => data.json() )
       .then(data => {
         this.setState({
@@ -57,13 +58,16 @@ class App extends Component {
           fotos: data,
         })
       })
-    }
+    //}
   }
 
   openModal(i){
+    console.log(i);
     this.setState({
     ...this.state,
-    modal:i
+    modal:i.url,
+    title: i.description,
+    description2:i.description2,
   })
   }
 
@@ -83,6 +87,7 @@ class App extends Component {
         pushClick={this.openModal}
         url={item.urls.thumb}
         description={item.description}
+        description2={item.alt_description}
         />
       )
     })
@@ -92,7 +97,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.state.modal && <Modal pushClick={this.closeModal} imgUrl={this.state.modal}/>}
+        {this.state.modal && <Modal pushClick={this.closeModal} imgUrl={this.state.modal} titlefoto={this.state.title} descriptionreal={this.state.description2}/> }
           <Navbar />
       <div className="flex-container">
             {this.state.fotos && this.llamarfotos()}

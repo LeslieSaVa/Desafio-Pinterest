@@ -14,6 +14,7 @@ class App extends Component {
       countPage:1,
       title:null,
       description2:null,
+      scroll:false,
     }
     this.openModal=this.openModal.bind(this);
     this.closeModal=this.closeModal.bind(this);
@@ -27,7 +28,14 @@ class App extends Component {
         this.setState({
           ...this.state,
           countPage:this.state.countPage+1,
-        }, () => {
+          scroll:true,
+        })
+      }
+      if(this.state.scroll){
+        this.setState({
+          ...this.state,
+          scroll:false,
+        },() => {
           fetch('https://api.unsplash.com/search/photos?page='+this.state.countPage+'&per_page=20&query=flowers&client_id=13a06edd9f1f800ed95967f2be74dc9462a6d41dcc8ac89f648c84b123782513')
           .then( data => data.json() )
           .then(data => {

@@ -8,12 +8,12 @@ function Modal (props) {
                     props.pushClick()
                 }
                 }}>
-                <i class="fas fa-angle-left"></i>    
+                <i className="fas fa-angle-left"></i>    
             <div className="modal">
                 <div className="header-modal">
                     <i className="fas fa-ellipsis-h"></i>
-                    <button className="btn-send"><i class="fas fa-upload"></i> Enviar</button>
-                    <button className="btn-save"><i class="fas fa-thumbtack"></i> Guardar</button>
+                    <button className="btn-send"><i className="fas fa-upload"></i> Enviar</button>
+                    <button className="btn-save"><i className="fas fa-thumbtack"></i> Guardar</button>
                 </div>
 
                 <div className="containerImgyText">

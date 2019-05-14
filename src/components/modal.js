@@ -24,13 +24,6 @@ function Modal (props) {
                         <h5>{props.titlefoto}</h5>
                         <button className="btn-follow">Seguir</button>
                         <button className="link">goosesglitter.com</button>
-                        {/* <p className="parrafo">You have your tree, your house and your<br/> 
-                        dinner table decorated already. <br/> 
-                        What are you going to do after finishing <br/> 
-                        your holiday decoration and <br/> 
-                        wrapping all the gifts? Don't forget<br/> 
-                        to glam up yourself...Más
-                        </p> */}
                         <p className="parrafo">{props.descriptionreal}</p>
                         <hr className="line"/>
                         <p className="text">Fotos y comentarios</p>
